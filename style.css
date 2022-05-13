@@ -7,13 +7,257 @@
     Requires PHP: 5.2.4
     Description: Veebiprogrammeerimise õppeaine raames loodud kodutöö teema
     Tags: RIF, õppekava, veebiprogrammeerimine
-    Author: Kairo Luha
+    Author: Kairo Luhsa
     Author URI: https://github.com/Kairokas/
     License: GNU General Public License v2 or later
     License URI: http://www.gnu.org/licenses/gpl-2.0.html
     All files, unless otherwise stated, are released under the GNU General Public
     License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
     This theme, like WordPress, is licensed under the GPL.
-    Use it to make something cool, have fun, and share what you've learned
-    with others.
 */
+
+.myNavList {
+    list-style-type: none;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style-type: none;
+    float: left;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(to top right, #0072CE, #9fa0ff);
+}
+
+header {
+    background-color: #0072CE;
+    height: 4rem;
+    position: sticky; top: 0;
+    padding-bottom: 1rem;
+    /*Selleta kuvab tekst labi sticky menyy*/
+    z-index: 1;
+}
+
+.page-container {
+    margin: auto;
+    width: 90%;
+}
+
+.site-logo {
+    height: 125%;
+    float: left;
+    width: 12rem;
+}
+
+.menu-menu-1-container {
+    float: right;
+    padding-right: 5%;
+    top: 50%;
+}
+
+.menu-menu-1-container a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    width: 80px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-menu-1-container a:hover {
+    color: #fddb3a;
+}
+
+.menu-menu-1-container .dot {
+    width: 6px;
+    height: 6px;
+    background: #fddb3a;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-menu-1-container a:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(25px);
+    transform: translateX(25px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+  
+.menu-menu-1-container a:nth-child(2):hover ~ .dot {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.menu-menu-1-container a:nth-child(3):hover ~ .dot {
+    -webkit-transform: translateX(205px);
+    transform: translateX(205px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.tutvustus-sisu {
+    text-align: center;
+}
+
+.tutvustus-background {
+    height: 50rem;
+    width: 100%;
+}
+
+.tutvustus-sisu-text {
+    position: absolute;
+    top: 40rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: xx-large;
+}
+
+.blogi-parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.blogi-parent > div {
+    margin: 1%;
+}
+
+.blogi-item {
+    border-radius: 1rem;
+    background-color: #fddb3a;
+    height: 30rem;
+    width: 20%;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.blogi-item.phantom {
+    visibility: hidden;
+}
+
+.blogi-item:hover {
+    transform: scale(1.2);
+}
+
+.blogi-pilt {
+    border-radius: 1rem;
+    width: 100%;
+    height: 70%;
+}
+
+.blogi-tekst {
+    text-align: center;
+    height: 25%;
+    margin: 0.5rem;
+    overflow: hidden;
+}
+
+#top-btn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 50px; /* Place the button at the bottom of the page */
+    right: 70px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(0, 91, 134); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 100px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    height: 60px;
+    width: 60px;
+}
+  
+#top-btn:hover {
+    background-color: #0072CE; /* Add a dark-grey background on hover */
+}
+
+#back-btn {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 40%;
+    right: 5%;
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(0, 91, 134); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 100px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    height: 60px;
+    width: 60px;
+}
+  
+#back-btn:hover {
+    background-color: #0072CE; /* Add a dark-grey background on hover */
+}
+
+.blogi-post {
+    display: flex;
+    padding-top: 1rem;
+}
+
+.blog-post-title {
+    color: white;
+    font-size: xxx-large;
+    font-family: system-ui;
+}
+
+.blog-content {
+    background: #0072ce;
+    box-shadow: 5px 5px 20px 2px #979797;
+}
+
+.blog-content-text {
+    margin: 2%;
+}
+
+.comments-section {
+    margin: 2%;
+    padding-bottom: 2%;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    margin-left: -14px;
+    margin-top: -7px;
+    cursor: pointer;
+  }
+
+footer {
+    padding: 60px 5% 60px 5%;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 15px;
+    padding-left: 10px;
+}
