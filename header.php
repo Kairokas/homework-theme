@@ -1,5 +1,5 @@
 <header>
-    <?php echo wp_get_attachment_image(25, "", False, array('class' => 'site-logo', 'alt' => 'Veebilehe logo')); ?>
+    <img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/images/sample-logo.png" alt="Veebilehe logo">
     
     <?php wp_nav_menu(array(
         'theme_location' => 'links-menu'

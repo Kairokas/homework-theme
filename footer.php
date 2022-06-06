@@ -8,5 +8,5 @@
 <footer id="kontakt">
     <hr>
     Veebilehe autor: Kairo Luha
-    <a href = "mailto: <?php get_bloginfo('admin_email'); ?>"><?php echo wp_get_attachment_image(24, "", False, array('class' => 'footer-icon', 'alt' => 'E-maili ikoon')); ?></a>
+    <a href = "mailto: <?php get_bloginfo('admin_email'); ?>"><img class="footer-icon" src="<?php echo get_template_directory_uri(); ?>/images/email_icon.png" alt="E-maili ikoon"></a>
 </footer>

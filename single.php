@@ -12,7 +12,7 @@
                 
             <?php echo 'Orienteeruv lugemisaeg: ' . lugemis_aeg(); ?>
         </div>
-        <?php previous_post_link(); next_post_link(); ?>
+        <?php echo previous_post_link(); next_post_link(); ?>
         <br>
         <br>
         <div class="comments-section">
@@ -23,7 +23,7 @@
     <?php get_footer(); ?>
 </div>
 <!--<?php home_url(); ?>-->
-<a href="/" id="back-btn" title="Back">
+<a href="/wp" id="back-btn" title="Back">
     <svg class="arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="5 0 50 80" xml:space="preserve">
         <polyline fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" points="
             35, 5 0,33 35, 63" />
